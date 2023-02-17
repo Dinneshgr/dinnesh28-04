@@ -1,11 +1,11 @@
-from flask import Flask  #1 st flask represent module another represent class
+from flask import Flask ,render_template #1 st flask represent module another represent class
 
 app = Flask(__name__)
 
 
 @app.route("/")
 def hello_world():
-  return "hello world thanos here "
+  return render_template('home.html')
 
 
 if __name__ == "__main__":
